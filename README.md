@@ -1,6 +1,6 @@
 ## Korean based Bert pre-trained (K-BERT)
 
-Korean-specific, small-scale, with comparable or better performances
+Korean-specific, small-scale, with comparable or better performances!
 
 ### Vocab, Parameters and Data
 
