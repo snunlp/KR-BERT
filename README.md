@@ -59,10 +59,10 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 ##### tensorflow
 
-* BERT tokenizer, character model [download](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX)
-* BidirectionalWordPiece tokenizer, character model [download](https://drive.google.com/open?id=1YhFobehwzdbIxsHHvyFU5okp-HRowRKS)
-* BERT tokenizer, sub-character model [download](https://drive.google.com/open?id=13oguhQvYD9wsyLwKgU-uLCacQVWA4oHg)
-* BidirectionalWordPiece tokenizer, sub-character model [download](https://drive.google.com/open?id=12izU0NZXNz9I6IsnknUbencgr7gWHDeM)
+* BERT tokenizer, character model ([download](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX))
+* BidirectionalWordPiece tokenizer, character model ([download](https://drive.google.com/open?id=1YhFobehwzdbIxsHHvyFU5okp-HRowRKS))
+* BERT tokenizer, sub-character model ([download](https://drive.google.com/open?id=13oguhQvYD9wsyLwKgU-uLCacQVWA4oHg))
+* BidirectionalWordPiece tokenizer, sub-character model ([download](https://drive.google.com/open?id=12izU0NZXNz9I6IsnknUbencgr7gWHDeM))
 
 
 #### Requirements
