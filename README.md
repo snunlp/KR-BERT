@@ -1,6 +1,7 @@
 ## Korean based Bert pre-trained (K-BERT)
 
-Korean-specific, small-scale, with comparable or better performances!
+Korean-specific, small-scale, with comparable or better performances
+
 
 ### Vocab, Parameters and Data
 
@@ -53,6 +54,16 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 |    마이크<br>maikhu<br>"microphone"     |   마#이#크<br>ma#i#khu    |    마이#크<br>mai#khu     |   마#이#크<br>ma#i#khu    |         마이크<br>maikhu         |               마이크<br>maikhu                |           마이크<br>maikhu           |                 마이크<br>maikhu                  |
 
 <br>
+
+### models
+
+##### tensorflow
+
+* BERT tokenizer, character model [download](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX)
+* BidirectionalWordPiece tokenizer, character model [download](https://drive.google.com/open?id=1YhFobehwzdbIxsHHvyFU5okp-HRowRKS)
+* BERT tokenizer, sub-character model [download](https://drive.google.com/open?id=13oguhQvYD9wsyLwKgU-uLCacQVWA4oHg)
+* BidirectionalWordPiece tokenizer, sub-character model [download](https://drive.google.com/open?id=12izU0NZXNz9I6IsnknUbencgr7gWHDeM)
+
 
 #### Requirements
 
