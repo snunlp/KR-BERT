@@ -1,0 +1,6 @@
+{
+    "config": "pretrained/bert_config_char16424.json",
+    "bert": "pretrained/pytorch_model_char16424_ranked.bin",
+    "tokenizer": "pretrained/vocab_snu_char16424.txt",
+    "vocab": "pretrained/vocab_snu_char16424.pkl"
+}

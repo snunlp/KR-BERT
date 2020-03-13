@@ -76,10 +76,12 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 ### Naver Sentiment Movie Corpus (NSMC)
 
-If you want to use the sub-character version of our models, let the *subchar* argument be True.
-And you can use the original BERT WordPiece tokenizer by entering 'bert' for the *tokenizer* argument, and if you use 'ranked' you can use our BidirectionalWordPiece tokenizer.
+* If you want to use the sub-character version of our models, let the `subchar` argument be `True`.
+* And you can use the original BERT WordPiece tokenizer by entering `bert` for the `tokenizer` argument, and if you use `ranked` you can use our BidirectionalWordPiece tokenizer.
 
 * tensorflow: After downloading our pretrained models, put them in a `models` directory in the `kbert_tensorflow` directory.
+
+* pytorch: After downloading our pretrained models, put them in a `checkpoints` directory in the `kbert_pytorch` directory.
 
 
 ```sh
