@@ -57,7 +57,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 ### models
 
-##### tensorflow
+#### tensorflow
 
 * BERT tokenizer, character model ([download](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX))
 * BidirectionalWordPiece tokenizer, character model ([download](https://drive.google.com/open?id=1YhFobehwzdbIxsHHvyFU5okp-HRowRKS))
@@ -65,7 +65,16 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 * BidirectionalWordPiece tokenizer, sub-character model ([download](https://drive.google.com/open?id=12izU0NZXNz9I6IsnknUbencgr7gWHDeM))
 
 
-#### Requirements
+#### pytorch
+
+* BERT tokenizer, character model ([download](https://drive.google.com/file/d/18lsZzx_wonnOezzB5QxqSliA2KL5BF0x/view?usp=sharing))
+* BidirectionalWordPiece tokenizer, character model ([download](https://drive.google.com/open?id=1C87CCHD9lOQhdgWPkMw_6ZD5M2km7f1p))
+* BERT tokenizer, sub-character model ([download](https://drive.google.com/open?id=1c1en4AMlCv2k7QapIzqjefnYzNOoh5KZ))
+* BidirectionalWordPiece tokenizer, sub-character model ([download](https://drive.google.com/file/d/1JvNYFQyb20SWgOiDxZn6h1-n_fjTU25S/view?usp=sharing))
+
+
+
+### Requirements
 
 - transformers == 2.1.1
 - tensorflow < 2.0
