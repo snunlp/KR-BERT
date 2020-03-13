@@ -2,6 +2,7 @@
 
 Korean-specific, small-scale, with comparable or better performances
 
+<br>
 
 ### Vocab, Parameters and Data
 
@@ -16,6 +17,8 @@ Korean-specific, small-scale, with comparable or better performances
 | KoBERT                                      | 0.750              |
 | K-BERT character BidirectionalWordPiece     | **0.779**              |
 | K-BERT sub-character BidirectionalWordPiece | 0.769              |
+
+<br>
 
 ### Sub-character
 
