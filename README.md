@@ -55,7 +55,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 <br>
 
-### models
+### Models
 
 #### tensorflow
 
