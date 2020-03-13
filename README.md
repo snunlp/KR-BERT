@@ -79,7 +79,9 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 If you want to use the sub-character version of our models, let the *subchar* argument be True.
 And you can use the original BERT WordPiece tokenizer by entering 'bert' for the *tokenizer* argument, and if you use 'ranked' you can use our BidirectionalWordPiece tokenizer.
 
-```zsh
+```sh
+!#/bin/bash 
+
 # pytorch
 python3 train.py --subchar {True, False} --tokenizer {bert, ranked}
 
