@@ -73,6 +73,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 * BidirectionalWordPiece tokenizer, sub-character model ([download](https://drive.google.com/file/d/1JvNYFQyb20SWgOiDxZn6h1-n_fjTU25S/view?usp=sharing))
 
 
+<br>
 
 ### Requirements
 
