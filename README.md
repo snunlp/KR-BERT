@@ -23,7 +23,7 @@ Korean text is basically represented with Hangul syllable characters, which can 
 
 In case of using our sub-character model, you should preprocess your data with the code below.
 
-```
+```python
 import torch
 from transformers import BertConfig, BertModel, BertForPreTraining, BertTokenizer
 from unicodedata import normalize
@@ -77,11 +77,11 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 ### Naver Sentiment Movie Corpus (NSMC)
 
 If you want to use the sub-character version of our models, let the *subchar* argument be True.
-And you can use the original BERT WordPiece tokenizer by entering 'bert' for the *tokenizer* argument, and if you use 'rank(ed)' you can use our BidirectionalWordPiece tokenizer.
+And you can use the original BERT WordPiece tokenizer by entering 'bert' for the *tokenizer* argument, and if you use 'ranked' you can use our BidirectionalWordPiece tokenizer.
 
-```
+```sh
 # pytorch
-python3 train.py --subchar {True, False} --tokenizer {bert, rank}
+python3 train.py --subchar {True, False} --tokenizer {bert, ranked}
 
 # tensorflow
 python3 run_classifier.py \
@@ -98,6 +98,9 @@ python3 run_classifier.py \
   --num_train_epochs=5.0 \
   --output_dir={output_dir}
 ```
+
+The pytorch code structure refers to that of https://github.com/aisolab/nlp_implementation .
+
 <br>
 
 ### NSMC Acc.
@@ -113,7 +116,5 @@ python3 run_classifier.py \
 ## Contacts
 
 nlp.snu@gmail.com
-
-
 
 
