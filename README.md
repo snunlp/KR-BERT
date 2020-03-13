@@ -79,7 +79,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 If you want to use the sub-character version of our models, let the *subchar* argument be True.
 And you can use the original BERT WordPiece tokenizer by entering 'bert' for the *tokenizer* argument, and if you use 'ranked' you can use our BidirectionalWordPiece tokenizer.
 
-```sh
+```bash
 # pytorch
 python3 train.py --subchar {True, False} --tokenizer {bert, ranked}
 
@@ -107,7 +107,7 @@ The pytorch code structure refers to that of https://github.com/aisolab/nlp_impl
 
 |       | multilingual BERT | KorBERT | KoBERT | K-BERT character WordPiece | K-BERT<br>character Bidirectional WordPiece | K-BERT sub-character WordPiece | K-BERT<br>sub-character Bidirectional WordPiece |
 |:-----:|-------------------:|----------------:|--------:|----------------------------:|-----------------------------------------:|--------------------------------:|---------------------------------------------:|
-| pytorch |              | **89.84**   | 89.01  | 89.34                      | **89.38**                                   | 89.20                          | 89.34                                       |
+| pytorch |        -      | **89.84**   | 89.01  | 89.34                      | **89.38**                                   | 89.20                          | 89.34                                       |
 | tensorflow | 	87.08		|	85.94  |   n/a |  89.86 | **90.10** | 89.76 | 89.86 |
 
 
