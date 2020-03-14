@@ -1,8 +1,6 @@
 ## Korean based Bert pre-trained (K-BERT)
 
-Korean-specific, small-scale, with comparable or better performances
-
-developed by Computational Linguistics Lab at Seoul National University
+Korean-specific, small-scale, with comparable or better performances developed by Computational Linguistics Lab at Seoul National University
 
 <br>
 
