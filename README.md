@@ -94,7 +94,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 * tensorflow: After downloading our pretrained models, put them in a `models` directory in the `kbert_tensorflow` directory.
 
-* pytorch: After downloading our pretrained models, put them in a `checkpoints` directory in the `kbert_pytorch` directory.
+* pytorch: After downloading our pretrained models, put them in a `pretrained` directory in the `kbert_pytorch` directory.
 
 
 ```sh
