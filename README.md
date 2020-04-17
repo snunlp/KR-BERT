@@ -1,4 +1,4 @@
-## Korean based Bert pre-trained (K-BERT)
+## KoRean based Bert pre-trained (KR-BERT)
 
 Korean-specific, small-scale, with comparable or better performances developed by Computational Linguistics Lab at Seoul National University
 
@@ -6,7 +6,7 @@ Korean-specific, small-scale, with comparable or better performances developed b
 
 ### Vocab, Parameters and Data
 
-|                |                              Mulitlingual BERT<br>(Google) |                KorBERT<br>(ETRI) |                              KoBERT<br>(SKT) |                       K-BERT character |                   K-BERT sub-character |
+|                |                              Mulitlingual BERT<br>(Google) |                KorBERT<br>(ETRI) |                              KoBERT<br>(SKT) |                       KR-BERT character |                   KR-BERT sub-character |
 | -------------: | ---------------------------------------------: | ---------------------: | ----------------------------------: | -------------------------------------: | -------------------------------------: |
 |     vocab size |                                        119,547 |                 30,797 |                               8,002 |                                 16,424 |                                 12,367 |
 | parameter size |                                    167,356,416 |            109,973,391 |                          92,186,880 |                             99,265,066 |                             96,145,233 |
@@ -15,8 +15,8 @@ Korean-specific, small-scale, with comparable or better performances developed b
 | Model                                       | Masked LM Accuracy |
 | ------------------------------------------- | ------------------ |
 | KoBERT                                      | 0.750              |
-| K-BERT character BidirectionalWordPiece     | **0.779**              |
-| K-BERT sub-character BidirectionalWordPiece | 0.769              |
+| KR-BERT character BidirectionalWordPiece     | **0.779**              |
+| KR-BERT sub-character BidirectionalWordPiece | 0.769              |
 
 <br>
 
@@ -49,7 +49,7 @@ print(tokenizer_kbert.tokenize(to_subchar(sentence)))
 We use the BidirectionalWordPiece model to reduce search costs while maintaining the possibility of choice. This model applies BPE in both forward and backward directions to obtain two candidates and chooses the one that has a higher frequency.
 
 
-|                                         |     Mulitlingual BERT     |   KorBERT<br>character   |          KoBERT           | K-BERT<br>character<br>WordPiece | K-BERT<br>character<br>BidirectionalWordPiece | K-BERT<br>sub-character<br>WordPiece | K-BERT<br>sub-character<br>BidirectionalWordPiece |
+|                                         |     Mulitlingual BERT     |   KorBERT<br>character   |          KoBERT           | KR-BERT<br>character<br>WordPiece | KR-BERT<br>character<br>BidirectionalWordPiece | KR-BERT<br>sub-character<br>WordPiece | KR-BERT<br>sub-character<br>BidirectionalWordPiece |
 | :-------------------------------------: | :-----------------------: | :-----------------------: | :-----------------------: | :------------------------------: | :-------------------------------------------: | :----------------------------------: | :-----------------------------------------------: |
 | 냉장고<br>nayngcangko<br>"refrigerator" | 냉#장#고<br>nayng#cang#ko | 냉#장#고<br>nayng#cang#ko | 냉#장#고<br>nayng#cang#ko |      냉장고<br>nayngcangko       |             냉장고<br>nayngcangko             |        냉장고<br>nayngcangko         |               냉장고<br>nayngcangko               |
 |        춥다<br>chwupta<br>"cold"        |           [UNK]           |     춥#다<br>chwup#ta     |     춥#다<br>chwup#ta     |        춥#다<br>chwup#ta         |               춥#다<br>chwup#ta               |         추#ㅂ다<br>chwu#pta          |                추#ㅂ다<br>chwu#pta                |
@@ -123,7 +123,7 @@ The pytorch code structure refers to that of https://github.com/aisolab/nlp_impl
 
 ### NSMC Acc.
 
-|       | multilingual BERT | KorBERT | KoBERT | K-BERT character WordPiece | K-BERT<br>character Bidirectional WordPiece | K-BERT sub-character WordPiece | K-BERT<br>sub-character Bidirectional WordPiece |
+|       | multilingual BERT | KorBERT | KoBERT | KR-BERT character WordPiece | KR-BERT<br>character Bidirectional WordPiece | KR-BERT sub-character WordPiece | KR-BERT<br>sub-character Bidirectional WordPiece |
 |:-----:|-------------------:|----------------:|--------:|----------------------------:|-----------------------------------------:|--------------------------------:|---------------------------------------------:|
 | pytorch |        -      | **89.84**   | 89.01  | 89.34                      | **89.38**                                   | 89.20                          | 89.34                                       |
 | tensorflow | 	87.08		|	85.94  |   n/a |  89.86 | **90.10** | 89.76 | 89.86 |
