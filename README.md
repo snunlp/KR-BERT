@@ -31,14 +31,14 @@ import torch
 from transformers import BertConfig, BertModel, BertForPreTraining, BertTokenizer
 from unicodedata import normalize
 
-tokenizer_kbert = BertTokenizer.from_pretrained('/path/to/vocab_file.txt', do_lower_case=False)
+tokenizer_krbert = BertTokenizer.from_pretrained('/path/to/vocab_file.txt', do_lower_case=False)
 
 # convert a string into sub-char
 def to_subchar(string):
     return normalize('NFKD', string)
 
 sentence = '토크나이저 예시입니다.'
-print(tokenizer_kbert.tokenize(to_subchar(sentence)))
+print(tokenizer_krbert.tokenize(to_subchar(sentence)))
 
 ```
 
@@ -92,9 +92,9 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 * If you want to use the sub-character version of our models, let the `subchar` argument be `True`.
 * And you can use the original BERT WordPiece tokenizer by entering `bert` for the `tokenizer` argument, and if you use `ranked` you can use our BidirectionalWordPiece tokenizer.
 
-* tensorflow: After downloading our pretrained models, put them in a `models` directory in the `kbert_tensorflow` directory.
+* tensorflow: After downloading our pretrained models, put them in a `models` directory in the `krbert_tensorflow` directory.
 
-* pytorch: After downloading our pretrained models, put them in a `pretrained` directory in the `kbert_pytorch` directory.
+* pytorch: After downloading our pretrained models, put them in a `pretrained` directory in the `krbert_pytorch` directory.
 
 
 ```sh
