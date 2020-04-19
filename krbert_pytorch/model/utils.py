@@ -13,7 +13,7 @@ class Vocab:
         eos_token: str = "<eos>",
         reserved_tokens: List[str] = None,
         token_to_idx: Dict[str, int] = None,
-        polarity_or_intensity_dict: Dict[str, int] = None,
+
     ):
         """Instantiating Vocab class
         Args:
@@ -37,7 +37,7 @@ class Vocab:
         self._eos_token = eos_token
         self._reserved_tokens = reserved_tokens
         self._special_tokens = []
-        self._polarity_or_intensity_dict = polarity_or_intensity_dict
+
 
         for tkn in [
             self._unknown_token,
@@ -59,9 +59,6 @@ class Vocab:
             )
 
         self._token_to_idx, self._idx_to_token = self._build(self._special_tokens)
-
-        if polarity_or_intensity_dict:
-            self._put_index_according_to_user_specification(polarity_or_intensity_dict)
 
         if token_to_idx:
             self._sort_index_according_to_user_specification(token_to_idx)
@@ -106,13 +103,6 @@ class Vocab:
         idx_to_token = list_of_tokens
         return token_to_idx, idx_to_token
 
-    def _put_index_according_to_user_specification(self, polarity_or_intensity_dict):
-        for token, idx in polarity_or_intensity_dict.items():
-            self.token_to_idx[token] = idx
-            self._unknown_token = str = "<unk>"
-            self._padding_token = str = "<pad>"
-            self.token_to_idx["<unk>"] = 0
-            self.token_to_idx["<pad>"] = 0
 
     def _sort_index_according_to_user_specification(self, token_to_idx):
         # Sanity checks
@@ -186,9 +176,7 @@ class Tokenizer:
         vocab: Vocab,
         split_fn: Callable[[str], List[str]],
         pad_fn: Callable[[List[int]], List[int]] = None,
-        polarity_vocab = None,
-        intensity_vocab = None,
-        subchar = False,
+        subchar = 'False',
     ) -> None:
         """Instantiating Tokenizer class
 
@@ -198,15 +186,15 @@ class Tokenizer:
             pad_fn (Callable): a function that can act as a padder
         """
         self._vocab = vocab
-        self._polarity_vocab = polarity_vocab
-        self._intensity_vocab = intensity_vocab
         self._split = split_fn
         self._pad = pad_fn
         self._subchar = subchar
-        self._polarity_and_intensity_embedding = False if self._polarity_vocab == None and self._intensity_vocab == None else True
-
+        if self._subchar == 'False':
+            print('[CONVERT A STRING INTO CHAR]')
+        else:
+            print('[CONVERT A STRING INTO SUB-CHAR]')
     def split(self, string: str) -> List[str]:
-        if self._subchar == False:
+        if self._subchar == 'False':
             list_of_tokens = self._split(string)
         else:
             list_of_tokens = self._split(self.to_subchar(string))
@@ -216,18 +204,6 @@ class Tokenizer:
         list_of_indices = self._vocab.to_indices(list_of_tokens)
         list_of_indices = self._pad(list_of_indices) if self._pad else list_of_indices
         return list_of_indices
-
-    def transform_kosac(self, list_of_tokens: List[str]) -> List[int]:
-        list_of_indices = self._vocab.to_indices(list_of_tokens)
-        list_of_indices = self._pad(list_of_indices) if self._pad else list_of_indices
-
-        # remove ## for polarity and intensity
-        list_of_tokens = [token[2:] if token[:2] =='##' else token for token in list_of_tokens]
-        list_of_polarity = self._polarity_vocab.to_indices(list_of_tokens)
-        list_of_polarity = self._pad(list_of_polarity) if self._pad else list_of_polarity
-        list_of_intensity = self._intensity_vocab.to_indices(list_of_tokens)
-        list_of_intensity = self._pad(list_of_intensity) if self._pad else list_of_intensity
-        return list_of_indices, list_of_polarity, list_of_intensity
 
     def split_and_transform(self, string: str) -> List[int]:
         return self.transform(self.split(string))
@@ -274,10 +250,5 @@ class PreProcessor(Tokenizer):
                 list_of_tokens = list_of_tokens[: (self._pad._length - 2)]
 
         list_of_tokens = ["[CLS]"] + list_of_tokens + ["[SEP]"]
-
-        if self._polarity_and_intensity_embedding == True :
-            list_of_indices, list_of_polarity, list_of_intensity = self.transform_kosac(list_of_tokens)
-            return list_of_indices, list_of_polarity, list_of_intensity
-        else:
-            list_of_indices = self.transform(list_of_tokens)
-            return list_of_indices
+        list_of_indices = self.transform(list_of_tokens)
+        return list_of_indices

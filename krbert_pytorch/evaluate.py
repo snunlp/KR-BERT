@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir', default='data', help="Directory containing config.json of data")
 parser.add_argument('--dataset', default='test', help="name of the data in --data_dir to be evaluate")
 parser.add_argument('--pretrained_config', default=None, required=False, type=str)
-parser.add_argument('--subchar', default=False, required=True)
+parser.add_argument('--subchar', default='False', choices=['False', 'True'], required=True)
 parser.add_argument('--tokenizer', default='ranked', choices=['ranked','bert'], required=True)
 
 if __name__ == '__main__':
@@ -44,6 +44,7 @@ if __name__ == '__main__':
         ptr_tokenizer = KBertRankedTokenizer(ptr_config.tokenizer, do_lower_case=False)
     else:
         ptr_tokenizer = BertTokenizer.from_pretrained(ptr_config.tokenizer, do_lower_case=False)
+        print('[BERT TOKENIZER]')
     pad_sequence = PadSequence(length=model_config.length, pad_val=vocab.to_indices(vocab.padding_token))
     preprocessor = PreProcessor(vocab=vocab, split_fn=ptr_tokenizer.tokenize, pad_fn=pad_sequence,subchar =args.subchar)
 
