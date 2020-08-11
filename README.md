@@ -132,6 +132,8 @@ The pytorch code structure refers to that of https://github.com/aisolab/nlp_impl
 <br>
 
 
+## Citation
+
 If you use these models, please cite the following paper:
 ```
 @article{lee2020krbert,
@@ -144,9 +146,8 @@ If you use these models, please cite the following paper:
   }
 ```
 
+<br>
 
 ## Contacts
 
 nlp.snu@gmail.com
-
-
