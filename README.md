@@ -1,7 +1,7 @@
 ## KoRean based Bert pre-trained (KR-BERT)
 
-This is a release of Korean-specific, small-scale BERT models with comparable or better performances developed by Computational Linguistics Lab at Seoul National University, referenced in [KR-BERT: A Small-Scale Korean-Specific Language Model](https://arxiv.org/abs/2008.03979).
-
+This is a release of Korean-specific, small-scale BERT models with comparable or better performances developed by Computational Linguistics Lab at Seoul National University <!-- referenced in [KR-BERT: A Small-Scale Korean-Specific Language Model](https://arxiv.org/abs/2008.03979).
+ -->
 <br>
 
 ### Vocab, Parameters and Data
@@ -130,7 +130,7 @@ The pytorch code structure refers to that of https://github.com/aisolab/nlp_impl
 
 
 <br>
-
+<!-- 
 
 If you use these models, please cite the following paper:
 ```
@@ -142,7 +142,7 @@ If you use these models, please cite the following paper:
     archivePrefix={arXiv},
     primaryClass={cs.CL}
 }
-```
+``` -->
 
 
 ## Contacts
