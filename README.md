@@ -142,7 +142,6 @@ If you use these models, please cite the following paper:
     year={2020},
     journal={ArXiv},
     volume={abs/2008.03979}
-    archivePrefix={arXiv}
   }
 ```
 
