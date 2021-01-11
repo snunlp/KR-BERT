@@ -58,8 +58,16 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 <br>
 
+
 ### Models
 
+|     | <td colspan=2> TensorFlow </td> | <td colspan=2> PyTorch </td> |
+|:---:|:-------------------------------:|:----------------------------:|
+|     | character | sub-character | character | sub-character |
+| WordPiece <br> tokenizer | [WP char](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX) | [WP subchar](https://drive.google.com/open?id=13oguhQvYD9wsyLwKgU-uLCacQVWA4oHg) | [WP char](https://drive.google.com/file/d/18lsZzx_wonnOezzB5QxqSliA2KL5BF0x/view?usp=sharing) | [WP subchar](https://drive.google.com/open?id=1c1en4AMlCv2k7QapIzqjefnYzNOoh5KZ)
+| Bidirectional <br> WordPiece <br> tokenizer | [BiWP char](https://drive.google.com/open?id=1YhFobehwzdbIxsHHvyFU5okp-HRowRKS) | [BiWP subchar](https://drive.google.com/open?id=12izU0NZXNz9I6IsnknUbencgr7gWHDeM) | [BiWP char](https://drive.google.com/open?id=1C87CCHD9lOQhdgWPkMw_6ZD5M2km7f1p)) | [BiWP subchar](https://drive.google.com/file/d/1JvNYFQyb20SWgOiDxZn6h1-n_fjTU25S/view?usp=sharing)
+
+<!-- 
 #### tensorflow
 
 * BERT tokenizer, character model ([download](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX))
@@ -74,7 +82,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 * BidirectionalWordPiece tokenizer, character model ([download](https://drive.google.com/open?id=1C87CCHD9lOQhdgWPkMw_6ZD5M2km7f1p))
 * BERT tokenizer, sub-character model ([download](https://drive.google.com/open?id=1c1en4AMlCv2k7QapIzqjefnYzNOoh5KZ))
 * BidirectionalWordPiece tokenizer, sub-character model ([download](https://drive.google.com/file/d/1JvNYFQyb20SWgOiDxZn6h1-n_fjTU25S/view?usp=sharing))
-
+ -->
 
 <br>
 
