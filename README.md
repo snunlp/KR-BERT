@@ -61,7 +61,7 @@ We use the BidirectionalWordPiece model to reduce search costs while maintaining
 
 ### Models
 
-|     | <td colspan=2> TensorFlow </td> | <td colspan=2> PyTorch </td> |
+|     | TensorFlow | | PyTorch | |
 |:---:|:-------------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|
 |     | character | sub-character | character | sub-character |
 | WordPiece <br> tokenizer | [WP char](https://drive.google.com/open?id=1SG5m-3R395VjEEnt0wxWM7SE1j6ndVsX) | [WP subchar](https://drive.google.com/open?id=13oguhQvYD9wsyLwKgU-uLCacQVWA4oHg) | [WP char](https://drive.google.com/file/d/18lsZzx_wonnOezzB5QxqSliA2KL5BF0x/view?usp=sharing) | [WP subchar](https://drive.google.com/open?id=1c1en4AMlCv2k7QapIzqjefnYzNOoh5KZ)
