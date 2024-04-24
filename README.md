@@ -27,11 +27,12 @@ Korean text is basically represented with Hangul syllable characters, which can 
 In case of using our sub-character model, you should preprocess your data with the code below.
 
 ```python
-import torch
-from transformers import BertConfig, BertModel, BertForPreTraining, BertTokenizer
+from transformers import BertTokenizer
 from unicodedata import normalize
 
-tokenizer_krbert = BertTokenizer.from_pretrained('/path/to/vocab_file.txt', do_lower_case=False)
+vocab_url = 'https://raw.githubusercontent.com/snunlp/KR-BERT/master/krbert_pytorch/pretrained/vocab_snu_subchar12367.txt'
+
+tokenizer_krbert = BertTokenizer.from_pretrained(vocab_url, do_lower_case=True)
 
 # convert a string into sub-char
 def to_subchar(string):
