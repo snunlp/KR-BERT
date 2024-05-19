@@ -22,7 +22,7 @@ import csv
 import os
 import modeling
 import optimization
-import tokenization
+import tokenization_ranked as tokenization
 import tensorflow as tf
 
 
@@ -108,7 +108,6 @@ flags.DEFINE_string("master", None, "[Optional] TensorFlow master URL.")
 flags.DEFINE_integer(
     "num_tpu_cores", 8,
     "Only used if `use_tpu` is True. Total number of TPU cores to use.")
-
 
 
 class InputExample(object):
@@ -635,13 +634,13 @@ def main(_):
   tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.INFO)
 
   if FLAGS.subchar == False:
-    real_init_checkpoint = './models/char_bert/'
+    real_init_checkpoint = './models/char_ranked/'
     real_bert_config_file = 'bert_config_char16424.json'
     real_data_dir = './data/char/'
     real_vocab_file = 'vocab_char_16424.txt'
 
   elif FLAGS.subchar == True:
-    real_init_checkpoint = './models/subchar_bert/'
+    real_init_checkpoint = './models/subchar_ranked/'
     real_bert_config_file = 'bert_config_subchar12367.json'
     real_data_dir = './data/subchar/'
     real_vocab_file = 'vocab_subchar_12367.txt'
